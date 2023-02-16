@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<p>Go ahead, upload your pictures. Randy, our server guy, is on the case.</p>
+<form action="" method=POST enctype="multipart/form-data">
+{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="Upload Image">
+</form>
+{% endblock %}
